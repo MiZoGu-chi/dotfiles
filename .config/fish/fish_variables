@@ -1,0 +1,4 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/home/max/Documents/etud/m1/web_des_donnees/tp/apache\x2djena\x2d5\x2e6\x2e0/bin
