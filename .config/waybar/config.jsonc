@@ -36,19 +36,19 @@
   "format": "<span color='#00FFFF'>  </span>",
   "on-click": "hyprlock",
   "tooltip": true,
-  "tooltip-format": "锁屏"
+  "tooltip-format": "Verrouiler l'écran"
   },
   "custom/reboot": {
     "format": "<span color='#FFD700'>  </span>",
     "on-click": "systemctl reboot",
     "tooltip": true,
-    "tooltip-format": "重启"
+    "tooltip-format": "Redémarrer"
   },
   "custom/power": {
     "format": "<span color='#FF4040'>  </span>",
     "on-click": "systemctl poweroff",
     "tooltip": true,
-    "tooltip-format": "关机"
+    "tooltip-format": "Éteindre"
   },
   "network": {
     "format-wifi": "<span color='#00FFFF'> 󰤨 </span>  {essid} ",
@@ -78,30 +78,14 @@
     "on-click-right": "pavucontrol -t 3",
     "on-click": "pactl -- set-sink-mute 0 toggle",
     "tooltip": true,
-    "tooltip-format": "当前系统声音: {volume}%"
-  },
-  "custom/temperature": {
-    "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
-    "format": "<span color='#FFA500'> </span>{}°C ",
-    "interval": 5,
-    "tooltip": true,
-    "tooltip-format": "当前 CPU 温度: {}°C"
-  },
-  "memory": {
-    "format": "<span color='#8A2BE2'>  </span>{used:0.1f}G/{total:0.1f}G ",
-    "tooltip": true,
-    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G"
-  },
-  "cpu": {
-    "format": "<span color='#FF9F0A'>  </span>{usage}% ",
-    "tooltip": true
+    "tooltip-format": "Volume : {volume}%"
   },
   "clock": {
     "interval": 1,
     "timezone": "Europe/Paris",
     "format": "<span color='#BF00FF'>  </span>  {:%H:%M} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y 年 %m 月 %d 日, %A}"
+    "tooltip-format": "{:L%A %d %B %Y}"
   },
   "tray": {
     "icon-size": 17,
@@ -111,7 +95,7 @@
     "device": "intel_backlight",
     "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
     "tooltip": true,
-    "tooltip-format": "当前屏幕亮度: {percent}%",
+    "tooltip-format": "Luminosité : {percent}%",
     "format-icons": [
       "<span color='#696969'> 󰃞 </span>",  // 暗 - 深灰
       "<span color='#A9A9A9'> 󰃝 </span>",  // 中 - 灰
